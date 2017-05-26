@@ -1,0 +1,61 @@
+{
+  "name": "flickr-sync",
+  "version": "1.0.0",
+  "description": "Utility for synchronizing the personal photo archive on Flickr",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=6.9"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.24.1",
+    "babel-core": "~6.24.1",
+    "babel-eslint": "~7.2.2",
+    "babel-jest": "^20.0.3",
+    "babel-plugin-transform-async-to-generator": "~6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "~6.24.1",
+    "babel-plugin-transform-flow-strip-types": "~6.22.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-stage-3": "~6.24.1",
+    "eslint": "~3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-import": "^2.3.0",
+    "flow-bin": "^0.47.0",
+    "jest": "^20.0.4"
+  },
+  "scripts": {
+    "clean": "rm -rf coverage dist tmp",
+    "lint": "eslint .",
+    "postlint": "npm run typecheck",
+    "typecheck": "flow check",
+    "pretest": "npm run lint",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "babel src/**/*.js -d dist",
+    "build:watch": "babel --watch src/**/*.js -d dist"
+  },
+  "author": "Alexandru Nedelcu <noreply@alexn.org> (https://alexn.org)",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandru/flickr-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexandru/flickr-sync/issues"
+  },
+  "homepage": "https://github.com/alexandru/flickr-sync",
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "babel-runtime": "~6.23.0"
+  }
+}
