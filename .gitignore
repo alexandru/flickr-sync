@@ -19,3 +19,6 @@ jsconfig.json
 # Misc
 .DS_Store
 tmp/
+
+# IntelliJ IDEA / WebStorm files
+.idea

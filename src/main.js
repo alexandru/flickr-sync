@@ -1,5 +1,8 @@
 /** @flow */
 
+import * as config from "./config";
+
+/*
 function delayedHello(name: string, delay: number = 2000): Promise<string> {
   return new Promise((resolve) => setTimeout(() => resolve(`Hello, ${name}`), delay));
 }
@@ -10,3 +13,6 @@ function delayedHello(name: string, delay: number = 2000): Promise<string> {
 export default async function greeter(name) { // eslint-disable-line flowtype/require-return-type
   return delayedHello(name);
 };
+*/
+
+config.readOrGenerateConfig().then(console.log);
